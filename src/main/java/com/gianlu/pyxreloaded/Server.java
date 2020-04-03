@@ -45,6 +45,9 @@ public class Server {
     private static final long BROADCAST_UPDATE_START_DELAY = TimeUnit.SECONDS.toMillis(60);
     private static final long BROADCAST_UPDATE_DELAY = TimeUnit.SECONDS.toMillis(60);
 
+    private static final int FALLBACK_PORT = 8080;
+    private static final String FALLBACK_HOST = "0.0.0.0";
+
     public static void main(String[] args) throws IOException, SQLException, UnrecoverableKeyException, CertificateException, NoSuchAlgorithmException, KeyStoreException, KeyManagementException {
         BasicConfigurator.configure();
         Logger.getRootLogger().setLevel(Level.INFO);
@@ -140,8 +143,11 @@ public class Server {
                 .setHandler(router);
 
 //        int port = preferences.getInt("port", 80);
-        int port = Integer.parseInt(System.getenv("PORT")); // get port from environment vars
-        String host = preferences.getString("host", "0.0.0.0");
+        String envPort = System.getenv("PORT"); // port from environment vars
+        int prefPort = preferences.getInt("port", FALLBACK_PORT); // port from preferences
+        // if PORT is not defined in env variables, use port from preferences
+        int port = (envPort != null) ? Integer.parseInt(envPort) : prefPort;
+        String host = preferences.getString("host", FALLBACK_HOST);
 
         if (preferences.getBoolean("secure", false)) {
             builder.addHttpListener(port, host, new HttpsRedirect())
