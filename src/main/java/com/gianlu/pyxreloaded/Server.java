@@ -139,7 +139,8 @@ public class Server {
                 .setServerOption(UndertowOptions.ENABLE_HTTP2, true)
                 .setHandler(router);
 
-        int port = preferences.getInt("port", 80);
+//        int port = preferences.getInt("port", 80);
+        int port = Integer.parseInt(System.getenv("PORT")); // get port from environment vars
         String host = preferences.getString("host", "0.0.0.0");
 
         if (preferences.getBoolean("secure", false)) {
