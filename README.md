@@ -2,6 +2,9 @@ Pretend You're Xyzzy
 ===================
 A fork of the original Pretend You're Xyzzy. Complete re-write of the frontend, and major changes in the backend. Finished product will have material design, work fairly decently on mobile devices, and have a server that is self-contained instead of depending on Tomcat.
 
+### Heroku
+This is a fork of a [fork](https://github.com/devgianlu/PYX-Reloaded) made compatible with [Heroku](https://www.heroku.com/) for deployment purposes. You can simple connect your existing heroku app (using deploy using Github) to a fork of this or use the Heroku CLI to deploy manually.
+
 Features
 --------
 We are nowhere near close to "done." It's been amazing to watch this thing climb. However, while we're working, we'll add new photos and explanations here so (eventually) we'll be able to convince you to use our fork. The main advantages to using this over the original or another fork are as follows:
