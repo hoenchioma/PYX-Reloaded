@@ -7,3 +7,4 @@ WebContent/.backup/
 .old/
 # preferences.json
 # server.sqlite
+*.iml
