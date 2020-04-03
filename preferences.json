@@ -1,0 +1,80 @@
+{
+  "port": 8080,
+  "host": "0.0.0.0",
+  "secure": false,
+  "securePort": 443,
+  "trustStorePath": "",
+  "trustStorePassword": "",
+  "keyStorePath": "",
+  "keyStorePassword": "",
+  "maxGames": 400,
+  "maxUsers": 100,
+  "cacheEnabled": true,
+  "webContent": "./WebContent",
+  "pyxDbUrl": "jdbc:sqlite:pyx.sqlite",
+  "serverStatusPage": "http://example.com",
+  "chat": {
+    "registeredOnly": false,
+    "floodCount": 4,
+    "floodTime": 30
+  },
+  "serverDb": {
+    "url": "jdbc:sqlite:server.sqlite",
+    "username": "",
+    "password": ""
+  },
+  "emails": {
+    "senderEmail": "",
+    "senderName": "PYX-Reloaded",
+    "smtpServer": "",
+    "smtpPort": 587,
+    "smtpUsername": "",
+    "smtpPassword": "",
+    "verifyCallback": ""
+  },
+  "socials": {
+    "googleClientId": "",
+    "facebookAppId": "",
+    "facebookAppSecret": "",
+    "githubAppId": "",
+    "githubAppSecret": "",
+    "twitterAppId": "",
+    "twitterAppSecret": "",
+    "twitterCallback": ""
+  },
+  "game": {
+    "maxSkipsBeforeKick": 2,
+    "roundIntermission": 8,
+    "minBlackCards": 50,
+    "minWhiteCardsPerPlayer": 20,
+    "playTimeoutBase": 45,
+    "judgeTimeoutBase": 40,
+    "playTimeoutPerCard": 15,
+    "judgeTimeoutPerCard": 7,
+    "scoreLimit": {
+      "min": 4,
+      "default": 8,
+      "max": 69
+    },
+    "playerLimit": {
+      "min": 3,
+      "default": 10,
+      "max": 20
+    },
+    "spectatorLimit": {
+      "min": 0,
+      "default": 10,
+      "max": 20
+    },
+    "blankCardsLimit": {
+      "min": 0,
+      "default": 0,
+      "max": 30
+    },
+    "winBy": {
+      "min": 0,
+      "default": 0,
+      "max": 5
+    }
+  }
+}

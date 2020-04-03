@@ -5,5 +5,5 @@ target/
 WebContent/node_modules/
 WebContent/.backup/
 .old/
-preferences.json
-server.sqlite
+# preferences.json
+# server.sqlite
