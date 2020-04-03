@@ -1,0 +1,1 @@
+web: java -jar target/PYX-Reloaded-jar-with-dependencies.jar
